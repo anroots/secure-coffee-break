@@ -24,6 +24,10 @@ void loop() {
 
   if (isCapSensorActive()) {
     lock();
+    
+    while (isCapSensorActive()) {
+      delay(2000);
+    }
   }
   
   button.update();
